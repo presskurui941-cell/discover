@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discover Tours Kenya Ltd | Safaris, Beach Holidays & Travel</title>
+
+  <meta
+    name="description"
+    content="Discover Tours Kenya Ltd offers safaris, beach holidays, hotel bookings, airport transfers, group travel and customized Kenya holiday packages."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --green: #0b6e4f;
+      --dark: #10312a;
+      --gold: #d4a017;
+      --light: #f6f8f6;
+      --white: #ffffff;
+      --text: #22302c;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      color: var(--text);
+      background: var(--light);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1150px, 92%);
+      margin: auto;
+    }
+
+    .topbar {
+      background: var(--dark);
+      color: #fff;
+      font-size: 0.85rem;
+      padding: 10px 0;
+    }
+
+    .topbar .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--white);
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--green);
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--green);
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--green);
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: var(--dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: #1a1a1a;
+    }
+
+    /* HERO VIDEO */
+    .hero {
+      position: relative;
+      min-height: 640px;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .video-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(6, 34, 27, 0.65);
+      z-index: 2;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 720px;
+      padding: 80px 0;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 28px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .trust-bar {
+      background: var(--white);
+      padding: 22px 0;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .trust-items {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      text-align: center;
+    }
+
+    .trust-item strong {
+      display: block;
+      color: var(--green);
+      font-size: 1.05rem;
+    }
+
+    section {
+      padding: 75px 0;
+    }
+
+    .section-head {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 45px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      color: var(--dark);
+    }
+
+    .section-head p {
+      margin-top: 10px;
+    }
+
+    /* VIDEO 2: SAFARI AND BEACH */
+    .video-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 480px;
+    }
+
+    .video-box {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      color: #fff;
+    }
+
+    .video-box video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .video-box .video-overlay {
+      z-index: 2;
+    }
+
+    .video-box-content {
+      position: relative;
+      z-index: 3;
+      padding: 35px;
+    }
+
+    .video-box-content h3 {
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      margin-bottom: 8px;
+    }
+
+    .video-box-content p {
+      margin-bottom: 18px;
+      max-width: 420px;
+    }
+
+    .packages {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .package {
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      transition: 0.3s;
+    }
+
+    .package:hover {
+      transform: translateY(-6px);
+    }
+
+    .package img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .package-body {
+      padding: 22px;
+    }
+
+    .package-body h3 {
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+
+    .price {
+      color: var(--green);
+      font-weight: 700;
+      font-size: 1.15rem;
+      margin: 10px 0;
+    }
+
+    .package ul {
+      margin: 12px 0 20px 18px;
+      font-size: 0.95rem;
+    }
+
+    .destinations {
+      background: var(--white);
+    }
+
+    .destination-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .destination {
+      position: relative;
+      height: 220px;
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .destination img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.4s;
+    }
+
+    .destination:hover img {
+      transform: scale(1.08);
+    }
+
+    .destination span {
+      position: relative;
+      z-index: 2;
+      padding: 16px;
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+      width: 100%;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service {
+      background: var(--white);
+      padding: 28px;
+      border-radius: 14px;
+      border-left: 5px solid var(--gold);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .service h3 {
+      margin-bottom: 8px;
+      color: var(--dark);
+    }
+
+    .booking {
+      background: var(--dark);
+      color: #fff;
+    }
+
+    .booking-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .booking h2 {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    form {
+      background: var(--white);
+      padding: 28px;
+      border-radius: 16px;
+      color: var(--text);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccd5d1;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 16px;
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .form-note {
+      font-size: 0.82rem;
+      color: #666;
+      margin-top: 10px;
+    }
+
+    .success-message {
+      display: none;
+      background: #e6f7ef;
+      color: var(--green);
+      padding: 14px;
+      border-radius: 8px;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: #25d366;
+      color: #fff;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+      z-index: 200;
+    }
+
+    footer {
+      background: #071e18;
+      color: #d8e3df;
+      padding: 55px 0 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 35px;
+      margin-bottom: 30px;
+    }
+
+    footer h4 {
+      color: #fff;
+      margin-bottom: 14px;
+    }
+
+    footer a:hover {
+      color: var(--gold);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      padding-top: 18px;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 900px) {
+      .packages,
+      .services,
+      .booking-grid,
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .destination-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .trust-items {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .video-box {
+        min-height: 320px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-links {
+        display: none;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .destination-grid,
+      .trust-items {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: 520px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container">
+      <span>Call us: +254 XXX XXX XXX</span>
+      <span>Email: bookings@discovertourskenya.co.ke</span>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav">
+      <a href="#home" class="logo">
+        Discover Tours <span>Kenya</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#packages">Packages</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a href="#booking" class="btn">Book Now</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- VIDEO 1: HOME PAGE BACKGROUND VIDEO -->
+    <section class="hero" id="home">
+      <video
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        poster="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1600&q=80"
+      >
+        <source src="videos/kenya-safari.mp4" type="video/mp4" />
+        <source src="videos/kenya-safari.webm" type="video/webm" />
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="video-overlay"></div>
+
+      <div class="container hero-content">
+        <h1>Discover Kenya.<br />Create Memories.</h1>
+
+        <p>
+          Explore Kenya’s best safaris, beaches, mountains, culture and holiday
+          experiences. We plan safe, memorable and affordable journeys for
+          individuals, families, groups and honeymooners.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#packages" class="btn btn-gold">View Packages</a>
+          <a href="#booking" class="btn">Plan My Trip</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO 2: SAFARI AND BEACH -->
+    <section class="video-grid">
+      <div class="video-box">
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          poster="https://images.unsplash.com/photo-1547471080-7cc2caa01d7e?auto=format&fit=crop&w=1200&q=80"
+        >
+          <source src="videos/maasai-mara.mp4" type="video/mp4" />
+          <source src="videos/maasai-mara.webm" type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
+
+        <div class="video-overlay"></div>
+
+        <div class="video-box-content">
+          <h3>Experience the Maasai Mara</h3>
+          <p>
+            See the Big Five, enjoy exciting game drives and create unforgettable
+            safari memories.
+          </p>
+
+          <a href="#booking" class="btn btn-gold">Book Safari</a>
+        </div>
+      </div>
+
+      <div class="video-box">
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          poster="https://images.unsplash.com/photo-1580996378376-06a5c24c2e8b?auto=format&fit=crop&w=1200&q=80"
+        >
+          <source src="videos/diani-beach.mp4" type="video/mp4" />
+          <source src="videos/diani-beach.webm" type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
+
+        <div class="video-overlay"></div>
+
+        <div class="video-box-content">
+          <h3>Relax at Diani Beach</h3>
+          <p>
+            White sand, warm ocean, beautiful resorts and the perfect coastal
+            escape.
+          </p>
+
+          <a href="#booking" class="btn">Book Beach Holiday</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <div class="trust-bar">
+      <div class="container trust-items">
+        <div class="trust-item">
+          <strong>Custom Itineraries</strong>
+          Travel designed around your budget
+        </div>
+
+        <div class="trust-item">
+          <strong>Local Expertise</strong>
+          Knowledgeable Kenyan travel team
+        </div>
+
+        <div class="trust-item">
+          <strong>Secure Bookings</strong>
+          Clear pricing and reliable partners
+        </div>
+
+        <div class="trust-item">
+          <strong>24/7 Support</strong>
+          Help before and during your trip
+        </div>
+      </div>
+    </div>
+
+    <!-- PACKAGES -->
+    <section id="packages">
+      <div class="container">
+        <div class="section-head">
+          <h2>Popular Travel Packages</h2>
+          <p>Choose a ready-made package or ask us to create a custom itinerary.</p>
+        </div>
+
+        <div class="packages">
+          <article class="package">
+            <img
+              src="https://images.unsplash.com/photo-1547471080-7cc2caa01d7e?auto=format&fit=crop&w=900&q=80"
+              alt="Maasai Mara safari"
+            />
+
+            <div class="package-body">
+              <h3>3-Day Maasai Mara Safari</h3>
+              <p>
+                Experience Kenya’s famous wildlife, Big Five game drives and
+                beautiful savannah landscapes.
+              </p>
+
+              <p class="price">From KES 25,000 per person</p>
+
+              <ul>
+                <li>Return transport from Nairobi</li>
+                <li>2 nights’ accommodation</li>
+                <li>Game drives</li>
+                <li>Professional driver-guide</li>
+              </ul>
+
+              <a href="#booking" class="btn">Enquire Now</a>
+            </div>
+          </article>
+
+          <article class="package">
+            <img
+              src="https://images.unsplash.com/photo-1580996378376-06a5c24c2e8b?auto=format&fit=crop&w=900&q=80"
+              alt="Diani Beach Kenya"
+            />
+
+            <div class="package-body">
+              <h3>4-Day Diani Beach Holiday</h3>
+              <p>
+                Relax on white-sand beaches, enjoy ocean views, water activities
+                and coastal culture.
+              </p>
+
+              <p class="price">From KES 30,000 per person</p>
+
+              <ul>
+                <li>Hotel accommodation</li>
+                <li>Airport transfers</li>
+                <li>Beach experience</li>
+                <li>Optional water sports</li>
+              </ul>
+
+              <a href="#booking" class="btn">Enquire Now</a>
+            </div>
+          </article>
+
+          <article class="package">
+            <img
+              src="https://images.unsplash.com/photo-1533323584246-15aef6c9b16d?auto=format&fit=crop&w=900&q=80"
+              alt="Amboseli National Park"
+            />
+
+            <div class="package-body">
+              <h3>3-Day Amboseli Safari</h3>
+              <p>
+                See elephants, Mount Kilimanjaro views and spectacular wildlife in
+                Amboseli National Park.
+              </p>
+
+              <p class="price">From KES 28,000 per person</p>
+
+              <ul>
+                <li>Transport from Nairobi</li>
+                <li>Accommodation</li>
+                <li>Game drives</li>
+                <li>Park fees</li>
+              </ul>
+
+              <a href="#booking" class="btn">Enquire Now</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESTINATIONS -->
+    <section class="destinations" id="destinations">
+      <div class="container">
+        <div class="section-head">
+          <h2>Top Destinations in Kenya</h2>
+          <p>From wildlife safaris to white-sand beaches, Kenya has something for every traveller.</p>
+        </div>
+
+        <div class="destination-grid">
+          <a class="destination" href="#booking">
+            <img
+              src="https://images.unsplash.com/photo-1547471080-7cc2caa01d7e?auto=format&fit=crop&w=800&q=80"
+              alt="Maasai Mara"
+            />
+            <span>Maasai Mara</span>
+          </a>
+
+          <a class="destination" href="#booking">
+            <img
+              src="https://images.unsplash.com/photo-1580996378376-06a5c24c2e8b?auto=format&fit=crop&w=800&q=80"
+              alt="Diani Beach"
+            />
+            <span>Diani Beach</span>
+          </a>
+
+          <a class="destination" href="#booking">
+            <img
+              src="https://images.unsplash.com/photo-1533323584246-15aef6c9b16d?auto=format&fit=crop&w=800&q=80"
+              alt="Amboseli"
+            />
+            <span>Amboseli</span>
+          </a>
+
+          <a class="destination" href="#booking">
+            <img
+              src="https://images.unsplash.com/photo-1601565413479-cf1e1e4a0d05?auto=format&fit=crop&w=800&q=80"
+              alt="Nairobi"
+            />
+            <span>Nairobi</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <h2>Our Travel Services</h2>
+          <p>We make travel simple, enjoyable and stress-free.</p>
+        </div>
+
+        <div class="services">
+          <div class="service">
+            <h3>Safari Planning</h3>
+            <p>Maasai Mara, Amboseli, Samburu, Tsavo, Lake Nakuru and more.</p>
+          </div>
+
+          <div class="service">
+            <h3>Beach Holidays</h3>
+            <p>Diani, Watamu, Mombasa, Malindi and Kilifi holiday packages.</p>
+          </div>
+
+          <div class="service">
+            <h3>Hotel Bookings</h3>
+            <p>Lodges, resorts, apartments and hotels across Kenya.</p>
+          </div>
+
+          <div class="service">
+            <h3>Airport Transfers</h3>
+            <p>Reliable pickups and drop-offs in Nairobi, Mombasa and other towns.</p>
+          </div>
+
+          <div class="service">
+            <h3>Group Travel</h3>
+            <p>Family trips, school tours, corporate retreats and team-building.</p>
+          </div>
+
+          <div class="service">
+            <h3>Honeymoon Packages</h3>
+            <p>Romantic safaris, beach holidays and special celebration trips.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOKING FORM -->
+    <section class="booking" id="booking">
+      <div class="container booking-grid">
+        <div>
+          <h2>Plan Your Trip</h2>
+          <p>
+            Tell us where you want to go, your travel dates and your budget.
+            Our team will prepare a custom itinerary for you.
+          </p>
+
+          <p><strong>WhatsApp:</strong> +254 XXX XXX XXX</p>
+          <p><strong>Email:</strong> bookings@discovertourskenya.co.ke</p>
+        </div>
+
+        <form id="bookingForm">
+          <div class="form-row">
+            <div>
+              <label for="name">Full Name</label>
+              <input id="name" name="name" type="text" required />
+            </div>
+
+            <div>
+              <label for="phone">Phone Number</label>
+              <input id="phone" name="phone" type="tel" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label for="email">Email Address</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+
+            <div>
+              <label for="destination">Destination</label>
+              <select id="destination" name="destination" required>
+                <option value="">Select destination</option>
+                <option>Maasai Mara</option>
+                <option>Amboseli</option>
+                <option>Diani Beach</option>
+                <option>Mombasa</option>
+                <option>Watamu</option>
+                <option>Nairobi Day Trip</option>
+                <option>Custom Trip</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label for="date">Travel Date</label>
+              <input id="date" name="date" type="date" required />
+            </div>
+
+            <div>
+              <label for="people">Number of Travellers</label>
+              <input id="people" name="people" type="number" min="1" required />
+            </div>
+          </div>
+
+          <label for="message">Tell Us About Your Trip</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Example: I want a 3-day Maasai Mara safari for 4 people in December."
+          ></textarea>
+
+          <button type="submit" class="btn btn-gold">Send Booking Request</button>
+
+          <p class="form-note">
+            Submitting this form sends an enquiry. Final prices depend on travel
+            dates, accommodation, transport and group size.
+          </p>
+
+          <div id="successMessage" class="success-message">
+            Thank you! Your request has been prepared. Please tap the WhatsApp
+            button to send it.
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div class="container footer-grid">
+      <div>
+        <h4>Discover Tours Kenya Ltd</h4>
+        <p>
+          Your trusted partner for safaris, beach holidays, hotel bookings,
+          airport transfers, group travel and customized Kenyan experiences.
+        </p>
+
+        <p><strong>Tagline:</strong> Discover Kenya. Create Memories.</p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <p><a href="#packages">Tour Packages</a></p>
+        <p><a href="#destinations">Destinations</a></p>
+        <p><a href="#services">Services</a></p>
+        <p><a href="#booking">Book Now</a></p>
+      </div>
+
+      <div>
+        <h4>Contact Us</h4>
+        <p>Phone: +254 105097803</p>
+        <p>Email: discoversafariskenya@yahoo.com</p>
+        <p>Location: Nairobi, Kenya</p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year"></span> Discover Tours Kenya Ltd. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP BUTTON -->
+  <a
+    class="whatsapp-float"
+    href="https://wa.me/254105097803?text=Hello%20Discover%20Tours%20Kenya%2C%20I%20would%20like%20to%20book%20a%20trip."
+    target="_blank"
+    rel="noopener"
+    aria-label="Chat on WhatsApp"
+  >
+    &#128172;
+  </a>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    document
+      .getElementById("bookingForm")
+      .addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const destination = document.getElementById("destination").value;
+        const date = document.getElementById("date").value;
+        const people = document.getElementById("people").value;
+        const message = document.getElementById("message").value.trim();
+
+        const whatsappText =
+          "Hello Discover Tours Kenya,%0A%0A" +
+          "I would like to book a trip.%0A%0A" +
+          "Name: " + encodeURIComponent(name) + "%0A" +
+          "Phone: " + encodeURIComponent(phone) + "%0A" +
+          "Email: " + encodeURIComponent(email) + "%0A" +
+          "Destination: " + encodeURIComponent(destination) + "%0A" +
+          "Travel date: " + encodeURIComponent(date) + "%0A" +
+          "Travellers: " + encodeURIComponent(people) + "%0A" +
+          "Details: " + encodeURIComponent(message);
+
+        const whatsappLink =
+          "https://wa.me/254XXXXXXXXX?text=" + whatsappText;
+
+        window.open(whatsappLink, "_blank");
+
+        document.getElementById("successMessage").style.display = "block";
+        this.reset();
+      });
+  </script>
+</body>
+</html>
